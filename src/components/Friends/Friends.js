@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Friend from '../Friend/Friend';
 
 const Friends = () => {
+    let [friends , setFriends] = useState([])
+    useEffect( () => {
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(data => setFriends(data))
+    }, [])
     return (
         <div>
-            <h2>Router is most important things in React Proigramming</h2>
-            <h4>Some Core Concepts of React is -</h4>
-
-            <ul>
-                <li>Router</li>
-                <li>Components</li>
-                <li>State</li>
-                <li>Hook</li>
-            </ul>
+            <h1>Hello Friends</h1>
+            <h2>You Have Total {friends.length} Friends Now</h2>
+            {
+                friends.map(friend => <Friend key={friend.id} friend={friend}></Friend>)
+            }
         </div>
     );
 };

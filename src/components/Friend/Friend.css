@@ -1,0 +1,11 @@
+.list{
+    border: 1px solid lightgray;
+    padding: 20px;
+    width: 400px;
+    list-style: none;
+    margin: 15px;
+  
+}
+.wrap{
+    float: left;
+}
