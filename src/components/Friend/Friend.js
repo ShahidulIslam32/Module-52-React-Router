@@ -7,7 +7,7 @@ const Friend = (props) => {
     let navigate = useNavigate()
     let showDetails = () => {
         
-        navigate('/about/' +id);
+        navigate('/friend/' +id);
     }
     return (
         <div className='mt-3 wrap'>

@@ -7,8 +7,7 @@ import './App.css';
 import Friends from './components/Friends/Friends';
 import NotFound from './components/Not Found/NotFound';
 import Header from './components/Header/Header';
-
-
+import FriendDetail from './components/FriendDetail/FriendDetail';
 
 
 
@@ -20,6 +19,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>    
         <Route path="/about" element={<About/>} />
         <Route path="/friends" element={<Friends/>} />
+        <Route path='/friend/:friendId' element={<FriendDetail></FriendDetail>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
